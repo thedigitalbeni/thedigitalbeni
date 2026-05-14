@@ -1,62 +1,90 @@
-<h1 align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Space+Mono&weight=700&size=28&pause=1000&color=58A6FF&center=true&vCenter=true&width=600&lines=Hey+I'm+Beni+%F0%9F%91%8B;Cybersecurity+%7C+Python+%7C+AI;Ethical+Hacker+%26+Builder;18y%2Fo+on+the+way+to+the+top+%F0%9F%9A%80" alt="Typing SVG" />
-</h1>
+<div align="center">
 
-<p align="center">
-  <img src="https://komarev.com/ghpvc/?username=thedigitalbeni&style=for-the-badge&color=0d1117&labelColor=1f6feb&label=PROFILE+VIEWS" />
-</p>
+<img src="./assets/header.svg" width="100%" alt="thedigitalbeni" />
+
+<br/>
+
+![Typing SVG](https://readme-typing-svg.demolab.com?font=Share+Tech+Mono&size=14&pause=1000&color=00FF41&center=true&vCenter=true&width=600&lines=Initializing+exploit+framework...;python3+-m+wealth.builder+run;sudo+apt-get+install+ambition;nmap+-sV+thedigitalbeni.dev;chmod+777+%2Fpath%2Fto%2Fsuccess;%5BACCESS+GRANTED%5D+Welcome+back.)
+
+</div>
 
 ---
 
-### ⚡ About Me
+<img align="right" src="https://github-readme-stats.vercel.app/api/top-langs/?username=thedigitalbeni&layout=compact&theme=chartreuse-dark&hide_border=true&bg_color=010b05&title_color=00ff41&text_color=00d4ff" width="35%" />
 
 ```python
-beni = {
-    "age": 18,
-    "role": ["Cybersecurity Student", "Python Dev", "Freelancer", "Content Creator"],
-    "os": ["Ubuntu (primary)", "Kali Linux", "Windows"],
-    "currently": "Breaking things ethically & building things that ship",
-    "goal": "Wealthy. Free. Impactful."
+root@thedigitalbeni:~$ cat about.json
+
+{
+  "name"       : "[YOUR NAME]",
+  "age"        : [YOUR AGE],
+  "role"       : ["Cybersecurity Student",
+                  "Python Developer",
+                  "Freelancer"],
+  "os"         : ["Ubuntu (primary)",
+                  "Kali Linux",
+                  "Windows"],
+  "building"   : "[WHAT YOU'RE WORKING ON]",
+  "platforms"  : ["TikTok", "YouTube"],
+  "goal"       : "Wealthy. Free. Impactful.",
+  "status"     : "OPEN_TO_WORK"
 }
 ```
 
----
-
-### 🔐 Arsenal
-
-![Python](https://img.shields.io/badge/Python-0d1117?style=for-the-badge&logo=python&logoColor=58a6ff)
-![Kali Linux](https://img.shields.io/badge/Kali_Linux-0d1117?style=for-the-badge&logo=kalilinux&logoColor=3fb950)
-![Next.js](https://img.shields.io/badge/Next.js-0d1117?style=for-the-badge&logo=next.js&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-0d1117?style=for-the-badge&logo=javascript&logoColor=e3b341)
-![TypeScript](https://img.shields.io/badge/TypeScript-0d1117?style=for-the-badge&logo=typescript&logoColor=58a6ff)
-![C++](https://img.shields.io/badge/C++-0d1117?style=for-the-badge&logo=cplusplus&logoColor=bc8cff)
-![Linux](https://img.shields.io/badge/Linux-0d1117?style=for-the-badge&logo=linux&logoColor=f78166)
+<br clear="right"/>
 
 ---
 
-### 📊 Stats
+### `> ARSENAL`
 
-<p align="center">
-  <img width="49%" src="https://github-readme-stats.vercel.app/api?username=thedigitalbeni&show_icons=true&theme=github_dark&hide_border=true&bg_color=0d1117&title_color=58a6ff&icon_color=3fb950" />
-  <img width="49%" src="https://github-readme-streak-stats.herokuapp.com/?user=thedigitalbeni&theme=github-dark-blue&hide_border=true&background=0d1117&ring=58a6ff&fire=f78166&currStreakLabel=58a6ff" />
-</p>
-
-<p align="center">
-  <img width="49%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=thedigitalbeni&layout=compact&theme=github_dark&hide_border=true&bg_color=0d1117&title_color=58a6ff" />
-</p>
-
----
-
-### 🌐 Connect
-
-<p align="center">
-  <a href="https://tiktok.com/@thedigitalbeni"><img src="https://img.shields.io/badge/TikTok-0d1117?style=for-the-badge&logo=tiktok&logoColor=white" /></a>
-  <a href="YOUR_YOUTUBE_LINK"><img src="https://img.shields.io/badge/YouTube-0d1117?style=for-the-badge&logo=youtube&logoColor=f78166" /></a>
-  <a href="YOUR_LINKEDIN"><img src="https://img.shields.io/badge/LinkedIn-0d1117?style=for-the-badge&logo=linkedin&logoColor=58a6ff" /></a>
-</p>
+![Python](https://img.shields.io/badge/Python-010b05?style=for-the-badge&logo=python&logoColor=00ff41)
+![Kali Linux](https://img.shields.io/badge/Kali_Linux-010b05?style=for-the-badge&logo=kalilinux&logoColor=00ff41)
+![Bash](https://img.shields.io/badge/Bash-010b05?style=for-the-badge&logo=gnubash&logoColor=00d4ff)
+![JavaScript](https://img.shields.io/badge/JavaScript-010b05?style=for-the-badge&logo=javascript&logoColor=e3b341)
+![TypeScript](https://img.shields.io/badge/TypeScript-010b05?style=for-the-badge&logo=typescript&logoColor=00d4ff)
+![C++](https://img.shields.io/badge/C++-010b05?style=for-the-badge&logo=cplusplus&logoColor=bc8cff)
+![Next.js](https://img.shields.io/badge/Next.js-010b05?style=for-the-badge&logo=next.js&logoColor=ffffff)
+![Linux](https://img.shields.io/badge/Linux-010b05?style=for-the-badge&logo=linux&logoColor=00ff41)
+![Wireshark](https://img.shields.io/badge/Wireshark-010b05?style=for-the-badge&logo=wireshark&logoColor=00d4ff)
+![Docker](https://img.shields.io/badge/Docker-010b05?style=for-the-badge&logo=docker&logoColor=00d4ff)
 
 ---
 
-<p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=58a6ff&height=80&section=footer&fontSize=14" />
-</p>
+### `> SYSTEM STATS`
+
+<div align="center">
+
+<img width="49%" src="https://github-readme-stats.vercel.app/api?username=thedigitalbeni&show_icons=true&theme=chartreuse-dark&hide_border=true&bg_color=010b05&title_color=00ff41&icon_color=00d4ff&text_color=00ff41" />
+<img width="49%" src="https://github-readme-streak-stats.herokuapp.com/?user=thedigitalbeni&theme=matrix&hide_border=true&background=010b05&ring=00ff41&fire=ff0055&currStreakLabel=00d4ff&sideLabels=00d4ff&dates=00ff4180" />
+
+</div>
+
+---
+
+### `> CONTRIBUTION MATRIX`
+
+<div align="center">
+
+![Snake animation](https://raw.githubusercontent.com/thedigitalbeni/thedigitalbeni/output/github-contribution-grid-snake-dark.svg)
+
+</div>
+
+---
+
+### `> ESTABLISH CONNECTION`
+
+<div align="center">
+
+[![TikTok](https://img.shields.io/badge/TikTok-010b05?style=for-the-badge&logo=tiktok&logoColor=00ff41&labelColor=010b05)](YOUR_TIKTOK_URL)
+[![YouTube](https://img.shields.io/badge/YouTube-010b05?style=for-the-badge&logo=youtube&logoColor=ff0055&labelColor=010b05)](YOUR_YOUTUBE_URL)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-010b05?style=for-the-badge&logo=linkedin&logoColor=00d4ff&labelColor=010b05)](YOUR_LINKEDIN_URL)
+[![Twitter](https://img.shields.io/badge/Twitter-010b05?style=for-the-badge&logo=x&logoColor=ffffff&labelColor=010b05)](YOUR_TWITTER_URL)
+[![Upwork](https://img.shields.io/badge/Upwork-010b05?style=for-the-badge&logo=upwork&logoColor=00ff41&labelColor=010b05)](YOUR_UPWORK_URL)
+
+</div>
+
+---
+
+<div align="center">
+
+![Visitor Count](https://komarev.com/ghpvc/?username=thedigitalbeni&style=for-the-badge&color=010b05&labelColor=00ff41&label=VISITORS)
