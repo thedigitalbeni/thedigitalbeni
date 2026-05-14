@@ -1,0 +1,47 @@
+<svg width="100%" viewBox="0 0 800 180" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@900&amp;family=Share+Tech+Mono&amp;display=swap');
+      .glitch { font-family: 'Orbitron', monospace; font-size: 42px; font-weight: 900; fill: #00ff41; letter-spacing: 6px; }
+      .sub { font-family: 'Share Tech Mono', monospace; font-size: 13px; fill: #00d4ff; letter-spacing: 4px; }
+      .cursor { fill: #00ff41; }
+      .g1 { animation: g1 3s infinite; }
+      .g2 { animation: g2 3s infinite; }
+      @keyframes g1 { 0%,89%,100%{transform:translate(0)} 90%{transform:translate(-4px,2px)} 93%{transform:translate(4px,-2px)} }
+      @keyframes g2 { 0%,87%,100%{transform:translate(0)} 88%{transform:translate(4px,2px)} 91%{transform:translate(-3px,-1px)} }
+      @keyframes glow { from{filter:drop-shadow(0 0 6px #00ff41)} to{filter:drop-shadow(0 0 20px #00ff41) drop-shadow(0 0 40px #00ff41)} }
+      @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
+      @keyframes scan { 0%{y:0} 100%{y:180} }
+      .main { animation: glow 2s ease-in-out infinite alternate; }
+      .cur { animation: blink 0.7s step-end infinite; }
+      .scanline { animation: scan 4s linear infinite; }
+    </style>
+    <filter id="noise">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="4" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feBlend in="SourceGraphic" mode="overlay" result="blend"/>
+      <feComposite in="blend" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+  <rect width="800" height="180" fill="#010b05" rx="10"/>
+  <rect width="800" height="180" fill="url(#noise)" opacity="0.03" rx="10"/>
+  <!-- Scanline sweep -->
+  <rect class="scanline" x="0" width="800" height="2" fill="#00ff41" opacity="0.04"/>
+  <!-- Grid lines -->
+  <line x1="0" y1="90" x2="800" y2="90" stroke="#00ff4108" stroke-width="1"/>
+  <line x1="400" y1="0" x2="400" y2="180" stroke="#00ff4108" stroke-width="1"/>
+  <!-- Glitch layers -->
+  <text x="400" y="95" text-anchor="middle" class="glitch g1" fill="#ff0055" opacity="0.6" clip-path="inset(30% 0 50% 0)">THEDIGITALBENI</text>
+  <text x="400" y="95" text-anchor="middle" class="glitch g2" fill="#00d4ff" opacity="0.6" clip-path="inset(60% 0 20% 0)">THEDIGITALBENI</text>
+  <!-- Main text -->
+  <text x="400" y="95" text-anchor="middle" class="glitch main">THEDIGITALBENI</text>
+  <!-- Subtitle -->
+  <text x="400" y="130" text-anchor="middle" class="sub">[ SECURITY · PYTHON · AI · BUILDER ]</text>
+  <!-- Cursor -->
+  <rect x="740" y="115" width="10" height="18" class="cur" fill="#00ff41"/>
+  <!-- Corner brackets -->
+  <path d="M20,20 L20,10 L30,10" stroke="#00ff41" stroke-width="1.5" fill="none" opacity="0.5"/>
+  <path d="M780,20 L780,10 L770,10" stroke="#00ff41" stroke-width="1.5" fill="none" opacity="0.5"/>
+  <path d="M20,160 L20,170 L30,170" stroke="#00ff41" stroke-width="1.5" fill="none" opacity="0.5"/>
+  <path d="M780,160 L780,170 L770,170" stroke="#00ff41" stroke-width="1.5" fill="none" opacity="0.5"/>
+</svg>
