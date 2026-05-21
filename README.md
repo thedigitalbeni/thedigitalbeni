@@ -2,7 +2,7 @@
 
 <img src="./assets/header.svg" width="100%" alt="thedigitalbeni" />
 
-<br/>
+<br/> 
 
 ![Typing SVG](https://readme-typing-svg.demolab.com?font=Share+Tech+Mono&size=14&pause=1200&color=00FF41&center=true&vCenter=true&width=600&height=30&lines=%24+whoami;Beni+%7C+Developer+%26+Creator;%24+cat+current_focus;AI+%E2%80%A2+Software+%E2%80%A2+Cybersecurity;%24+sudo+systemctl+status+beneyas;Building.+Learning.+Improving.;%24+nano+mission;Create+technology+that+matters)
 
