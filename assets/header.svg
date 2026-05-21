@@ -36,7 +36,8 @@
   <!-- Main text -->
   <text x="400" y="95" text-anchor="middle" class="glitch main">THEDIGITALBENI</text>
   <!-- Subtitle -->
-  <text x="400" y="130" text-anchor="middle" class="sub">[ SECURITY · PYTHON · AI · BUILDER ]</text>
+  <text x="400" y="130" text-anchor="middle" class="sub">[ FOCUSED ON GROWTH
+DRIVEN BY CREATION. ]</text>
   <!-- Cursor -->
   <rect x="740" y="115" width="10" height="18" class="cur" fill="#00ff41"/>
   <!-- Corner brackets -->
