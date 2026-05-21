@@ -102,16 +102,6 @@
 <!-- ═══════════════════════════ SYSTEM STATS ══════════════════════════════ -->
 
 ### `> SYSTEM STATS`
-
-<div align="center">
-
-<img height="100em" src="https://github-readme-stats.vercel.app/api?username=thedigitalbeni&show_icons=true&theme=chartreuse-dark&hide_border=true&bg_color=010b05&title_color=00ff41&icon_color=00d4ff&text_color=00ff41&include_all_commits=true&count_private=true" />
-<img height="180em" src="https://streak-stats.demolab.com/?user=thedigitalbeni&theme=matrix&hide_border=true&background=010b05&ring=00ff41&fire=ff0055&currStreakLabel=00d4ff&sideLabels=00d4ff&dates=00ff4180" />
-
-</div>
-
-<br/>
-
 <div align="center">
 
 <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=thedigitalbeni&layout=compact&theme=chartreuse-dark&hide_border=true&bg_color=010b05&title_color=00ff41&text_color=00d4ff&langs_count=8&cache_seconds=1800&count_private=true" />
