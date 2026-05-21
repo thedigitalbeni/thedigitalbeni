@@ -7,7 +7,10 @@
 ![Typing SVG](https://readme-typing-svg.demolab.com?font=Share+Tech+Mono&size=14&pause=1000&color=00FF41&center=true&vCenter=true&width=600&lines=Initializing+exploit+framework...;python3+-m+wealth.builder+run;sudo+apt-get+install+ambition;nmap+-sV+thedigitalbeni.dev;chmod+777+%2Fpath%2Fto%2Fsuccess;%5BACCESS+GRANTED%5D+Welcome+back.)
 
 </div>
+
+
 ---
+
 
 <!-- ════════════════════════════ ABOUT ════════════════════════════════════ -->
 
