@@ -16,13 +16,12 @@ jobs:
     timeout-minutes: 10
 
     steps:
-      - name: Generate github-contribution-grid-snake.svg
+      - name: Generate matrix-colored snake animation
         uses: Platane/snk/svg-only@v3
         with:
           github_user_name: ${{ github.repository_owner }}
           outputs: |
-            dist/github-contribution-grid-snake.svg
-            dist/github-contribution-grid-snake-dark.svg?palette=github-dark
+            dist/github-contribution-grid-snake-matrix.svg?color_snake=#00d4ff&color_dots[0]=#010b05&color_dots[1]=#003300&color_dots[2]=#006600&color_dots[3]=#00cc00&color_dots[4]=#00ff41
 
       - name: Push snake SVG to output branch
         uses: crazy-max/ghaction-github-pages@v3.1.0
