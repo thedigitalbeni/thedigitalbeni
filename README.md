@@ -179,6 +179,7 @@ root@thedigitalbeni:~$ cat about.json
 
 ### `> CONTRIBUTION MATRIX`
 <div align="center">
+
 ![Snake animation](https://raw.githubusercontent.com/thedigitalbeni/thedigitalbeni/output/github-contribution-grid-snake-matrix.svg)
 
 </div>
