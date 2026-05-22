@@ -25,7 +25,6 @@ root@thedigitalbeni:~$ cat about.json
     "Content Creation",
     "Problem Solving"
   ],
-
   "currently"  : [
     "Building real-world projects",
     "Sharpening DSA & backend skills",
@@ -34,47 +33,7 @@ root@thedigitalbeni:~$ cat about.json
     "Exploring AI-powered businesses"
   ],
 
-  "tech_stack" : {
-    "languages" : [
-      "Python",
-      "JavaScript",
-      "TypeScript",
-      "C++",
-      "Java",
-      "SQL"
-    ],
-  },
-
   "fun_fact"   : "I build systems by day and break them ethically by night 🔐",
-
-  "mindset"    : [
-    "Learn fast",
-    "Build consistently",
-    "Think long-term",
-    "Create leverage"
-  ],
-
-  "building"   : "AI tools, automation systems, and future digital businesses 🚀",
-
-  "learning"   : [
-    "Computer Science",
-    "Ethical Hacking",
-    "System Design",
-    "AI Engineering",
-    "Business & Startups"
-  ],
-
-  "interests"  : [
-    "Startups",
-    "Open Source",
-    "AI Agents",
-    "Cybersecurity",
-    "Digital Content",
-    "Tech Entrepreneurship"
-  ],
-
-  "goal"       : "Build impactful technology, achieve financial freedom, and create companies that scale globally.",
-
   "status"     : "🟢 OPEN TO INTERNSHIPS • COLLABORATIONS • STARTUP OPPORTUNITIES"
 }
 ```
