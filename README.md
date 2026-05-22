@@ -2,34 +2,84 @@
 
 <img src="./assets/header.svg" width="100%" alt="thedigitalbeni" />
 
-<br/> 
+<br/>
 
 ![Typing SVG](https://readme-typing-svg.demolab.com?font=Share+Tech+Mono&size=14&pause=1200&color=00FF41&center=true&vCenter=true&width=600&height=30&lines=%24+whoami;Beni+%7C+Developer+%26+Creator;%24+cat+current_focus;AI+%E2%80%A2+Software+%E2%80%A2+Cybersecurity;%24+sudo+systemctl+status+beneyas;Building.+Learning.+Improving.;%24+nano+mission;Create+technology+that+matters)
 
 </div>
 
-
 ---
-
 
 <!-- ════════════════════════════ ABOUT ════════════════════════════════════ -->
 
 ```python
 root@thedigitalbeni:~$ cat about.json
 {
-  "name"       : "Beni",
-  "role"       : ["Developer", "Creator", "Security Student"],
-  "based"      : "📍 [Your City, Country 🏳️]",
-  "focus"      : ["AI", "Software Engineering", "Cybersecurity"],
-  "fun_fact"   : "I build by day, break it (ethically) 🔐",
-  "building"   : "Something big — watch this space 🚀",
-  "learning"   : ["CS Degree", "Ethical Hacking", "AI Tools"],
-  "goal"       : "Wealthy. Free. Impactful.",
-  "status"     : "🟢 OPEN_TO_INTERNSHIPS_AND_STARTUPS"
+  "name"       : "Beneyas Tadu",
+  "role"       : ["Developer", "Creator", "pentester", "student"],
+  "based"      : "📍Addis Ababa, Ethiopia 🏳️",
+  "focus"      : [
+    "Artificial Intelligence",
+    "Automation Systems",
+    "Cybersecurity",
+    "Content Creation",
+    "Problem Solving"
+  ],
+
+  "currently"  : [
+    "Building real-world projects",
+    "Sharpening DSA & backend skills",
+    "Growing YouTube & TikTok",
+    "Learning ethical hacking",
+    "Exploring AI-powered businesses"
+  ],
+
+  "tech_stack" : {
+    "languages" : [
+      "Python",
+      "JavaScript",
+      "TypeScript",
+      "C++",
+      "Java",
+      "SQL"
+    ],
+  },
+
+  "fun_fact"   : "I build systems by day and break them ethically by night 🔐",
+
+  "mindset"    : [
+    "Learn fast",
+    "Build consistently",
+    "Think long-term",
+    "Create leverage"
+  ],
+
+  "building"   : "AI tools, automation systems, and future digital businesses 🚀",
+
+  "learning"   : [
+    "Computer Science",
+    "Ethical Hacking",
+    "System Design",
+    "AI Engineering",
+    "Business & Startups"
+  ],
+
+  "interests"  : [
+    "Startups",
+    "Open Source",
+    "AI Agents",
+    "Cybersecurity",
+    "Digital Content",
+    "Tech Entrepreneurship"
+  ],
+
+  "goal"       : "Build impactful technology, achieve financial freedom, and create companies that scale globally.",
+
+  "status"     : "🟢 OPEN TO INTERNSHIPS • COLLABORATIONS • STARTUP OPPORTUNITIES"
 }
 ```
-<br/>
 
+<br/>
 
 <!-- ═══════════════════════ CURRENT PROCESSES ══════════════════════════════ -->
 
@@ -52,19 +102,20 @@ root@thedigitalbeni:~$ cat about.json
 ```text
   💻  LANGUAGES
   ─────────────────────────────────────────────────────────────────────────────
-  Python         ████████████████████░░░░░   80 %   [ Primary Language   ]
-  JavaScript     █████████████████░░░░░░░░   68 %   [ Most Used          ]
-  TypeScript     ██████████████░░░░░░░░░░░   55 %   [ Growing Daily      ]
-  C++            ████████░░░░░░░░░░░░░░░░░   32 %   [ In Progress        ]
-  Bash / Shell   ███████████░░░░░░░░░░░░░░   44 %   [ Daily Driver       ]
+  HTML / CSS     ███████████████████████░░   90 %   [ UI Crafting        ]
+  Python         ███████████████████░░░░░░   76 %   [ Primary Language   ]
+  Bash / Shell   ███████████████░░░░░░░░░░   60 %   [ Daily Driver       ]
+  JavaScript     █████████████░░░░░░░░░░░░   50 %   [ Web Logic          ]
+  C++            █████░░░░░░░░░░░░░░░░░░░░   20 %   [ In Progress        ]
 
   🛠  TOOLS & PLATFORMS
   ─────────────────────────────────────────────────────────────────────────────
-  Linux / Kali   ████████████████████████░   96 %   [ Home OS            ]
-  Docker         █████████████░░░░░░░░░░░░   52 %   [ Containerizing     ]
-  Next.js        ████████████░░░░░░░░░░░░░   48 %   [ Web Projects       ]
-  Wireshark      ████████░░░░░░░░░░░░░░░░░   32 %   [ Packet Analysis    ]
+  VS Code        ████████████████████████░   95 %   [ Main Workspace     ]
+  GitHub         █████████████████████░░░░   85 %   [ Open Source & VCS  ]
   Git            ███████████████████░░░░░░   76 %   [ Version Control    ]
+  Linux          ██████████████████░░░░░░░   73 %   [ Home OS            ]
+  Docker         █████████░░░░░░░░░░░░░░░░   30 %   [ Containerizing     ]
+  Next.js        ███████░░░░░░░░░░░░░░░░░░   25 %   [ Web Projects       ]
 ```
 
 <br/>
@@ -72,15 +123,20 @@ root@thedigitalbeni:~$ cat about.json
 <div align="center">
 
 ![Python](https://img.shields.io/badge/Python-010b05?style=for-the-badge&logo=python&logoColor=00ff41)
-![Kali Linux](https://img.shields.io/badge/Kali_Linux-010b05?style=for-the-badge&logo=kalilinux&logoColor=00ff41)
-![Bash](https://img.shields.io/badge/Bash-010b05?style=for-the-badge&logo=gnubash&logoColor=00d4ff)
+![HTML5](https://img.shields.io/badge/HTML5-010b05?style=for-the-badge&logo=html5&logoColor=e34c26)
+![CSS3](https://img.shields.io/badge/CSS3-010b05?style=for-the-badge&logo=css3&logoColor=1572B6)
 ![JavaScript](https://img.shields.io/badge/JavaScript-010b05?style=for-the-badge&logo=javascript&logoColor=e3b341)
-![TypeScript](https://img.shields.io/badge/TypeScript-010b05?style=for-the-badge&logo=typescript&logoColor=00d4ff)
+![Bash](https://img.shields.io/badge/Bash-010b05?style=for-the-badge&logo=gnubash&logoColor=00d4ff)
 ![C++](https://img.shields.io/badge/C++-010b05?style=for-the-badge&logo=cplusplus&logoColor=bc8cff)
 ![Next.js](https://img.shields.io/badge/Next.js-010b05?style=for-the-badge&logo=nextdotjs&logoColor=ffffff)
+![React](https://img.shields.io/badge/React-010b05?style=for-the-badge&logo=react&logoColor=61DAFB)
+![TailwindCSS](https://img.shields.io/badge/TailwindCSS-010b05?style=for-the-badge&logo=tailwindcss&logoColor=38BDF8)
 ![Linux](https://img.shields.io/badge/Linux-010b05?style=for-the-badge&logo=linux&logoColor=00ff41)
-![Wireshark](https://img.shields.io/badge/Wireshark-010b05?style=for-the-badge&logo=wireshark&logoColor=00d4ff)
+![Git](https://img.shields.io/badge/Git-010b05?style=for-the-badge&logo=git&logoColor=f1502f)
+![GitHub](https://img.shields.io/badge/GitHub-010b05?style=for-the-badge&logo=github&logoColor=ffffff)
+![VSCode](https://img.shields.io/badge/VSCode-010b05?style=for-the-badge&logo=visualstudiocode&logoColor=007ACC)
 ![Docker](https://img.shields.io/badge/Docker-010b05?style=for-the-badge&logo=docker&logoColor=00d4ff)
+![Node.js](https://img.shields.io/badge/Node.js-010b05?style=for-the-badge&logo=node.js&logoColor=339933)
 
 </div>
 
@@ -117,6 +173,7 @@ root@thedigitalbeni:~$ cat about.json
 <!-- ═════════════════════════ CONTRIBUTION MATRIX ════════════════════════ -->
 
 ### `> CONTRIBUTION MATRIX`
+
 ![Snake animation](https://raw.githubusercontent.com/thedigitalbeni/thedigitalbeni/output/github-contribution-grid-snake-dark.svg)
 
 </div>
