@@ -208,11 +208,11 @@ root@thedigitalbeni:~$ cat about.json
 
 <div align="center">
 
-[![YouTube](https://img.shields.io/badge/YouTube-010b05?style=for-the-badge&logo=youtube&logoColor=ff0055&labelColor=010b05)](YOUR_YOUTUBE_URL)
-[![TikTok](https://img.shields.io/badge/TikTok-010b05?style=for-the-badge&logo=tiktok&logoColor=00ff41&labelColor=010b05)](YOUR_TIKTOK_URL)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-010b05?style=for-the-badge&logo=linkedin&logoColor=00d4ff&labelColor=010b05)](YOUR_LINKEDIN_URL)
+[![YouTube](https://img.shields.io/badge/YouTube-010b05?style=for-the-badge&logo=youtube&logoColor=ff0055&labelColor=010b05)](https://www.youtube.com/channel/UCxOqWv97JEeSUL7A6FAau8A?sub_confirmation=1)
+[![TikTok](https://img.shields.io/badge/TikTok-010b05?style=for-the-badge&logo=tiktok&logoColor=00ff41&labelColor=010b05)](https://www.tiktok.com/@thedigitalbeni?_t=ZN-8y9TRgLXMxi&_r=1)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-010b05?style=for-the-badge&logo=linkedin&logoColor=00d4ff&labelColor=010b05)](https://www.linkedin.com/in/beneyas-tadu-51a399398/)
 [![Portfolio](https://img.shields.io/badge/Portfolio-010b05?style=for-the-badge&logo=vercel&logoColor=ffffff&labelColor=010b05)](YOUR_WEBSITE_URL)
-[![Email](https://img.shields.io/badge/Email-010b05?style=for-the-badge&logo=gmail&logoColor=ff0055&labelColor=010b05)](mailto:YOUR_EMAIL_HERE)
+[![Email](https://img.shields.io/badge/Email-010b05?style=for-the-badge&logo=gmail&logoColor=ff0055&labelColor=010b05)](mailto:beneyas.work@gmail.com)
 [![Resume](https://img.shields.io/badge/Resume_PDF-010b05?style=for-the-badge&logo=adobeacrobatreader&logoColor=00d4ff&labelColor=010b05)](YOUR_RESUME_PDF_URL)
 
 </div>
