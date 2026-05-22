@@ -14,23 +14,22 @@
 
 <!-- ════════════════════════════ ABOUT ════════════════════════════════════ -->
 
-```text
-┌──(root㉿thedigitalbeni)-[~]
-└─$ cat about.me
-
-  ╔════════════════════════════════════════════════════════════╗
-  ║  NAME      →  Beni                                         ║
-  ║  ROLE      →  Developer  ·  Creator  ·  Security Student   ║
-  ║  BASED     →  📍 [Your City, Country 🏳️]                   ║
-  ║  FOCUS     →  AI  ·  Software Engineering  ·  CyberSec     ║
-  ║  FUN FACT  →  I build by day, break it (ethically) 🔐      ║
-  ║  BUILDING  →  Something big — watch this space 🚀          ║
-  ║  LEARNING  →  CS Degree  ·  Ethical Hacking  ·  AI Tools   ║
-  ║  STATUS    →  🟢 Open to Internships & Startup Ops         ║
-  ╚════════════════════════════════════════════════════════════╝
+```python
+root@thedigitalbeni:~$ cat about.json
+{
+  "name"       : "Beni",
+  "role"       : ["Developer", "Creator", "Security Student"],
+  "based"      : "📍 [Your City, Country 🏳️]",
+  "focus"      : ["AI", "Software Engineering", "Cybersecurity"],
+  "fun_fact"   : "I build by day, break it (ethically) 🔐",
+  "building"   : "Something big — watch this space 🚀",
+  "learning"   : ["CS Degree", "Ethical Hacking", "AI Tools"],
+  "goal"       : "Wealthy. Free. Impactful.",
+  "status"     : "🟢 OPEN_TO_INTERNSHIPS_AND_STARTUPS"
+}
 ```
-
 <br/>
+
 
 <!-- ═══════════════════════ CURRENT PROCESSES ══════════════════════════════ -->
 
