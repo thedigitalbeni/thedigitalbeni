@@ -169,7 +169,7 @@ root@thedigitalbeni:~$ cat about.json
 
 <div align="center">
 
-<img width="70%" height="130" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=thedigitalbeni&theme=github_dark" />
+<img width="70%" height="150" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=thedigitalbeni&theme=github_dark" />
 
 </div>
 
