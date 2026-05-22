@@ -120,7 +120,7 @@
 </div>
 
 <br/>
-<sub>⚡ WakaTime card requires a <a href="https://wakatime.com">WakaTime</a> account connected to GitHub — <a href="https://wakatime.com/help/integrations/github">setup guide here</a>.</sub>
+
 
 ---
 
