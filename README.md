@@ -35,8 +35,6 @@ root@thedigitalbeni:~$ cat about.json
   ],
 
   "fun_fact"   : "I build systems by day and break them ethically by night 🔐",
-  "building"   : "AI tools, automation systems, and future digital businesses 🚀",
-  "goal"       : "Build impactful technology, achieve financial freedom, and create companies that scale globally.",
   "status"     : "🟢 OPEN TO INTERNSHIPS • COLLABORATIONS • STARTUP OPPORTUNITIES"
 }
 ```
