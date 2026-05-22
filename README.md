@@ -108,8 +108,8 @@ root@thedigitalbeni:~$ cat about.json
 </div>
 <br/>
 <div align="center">
-<img height="180em" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=thedigitalbeni&theme=github_dark" />
-<img height="180em" src="https://github-readme-stats.vercel.app/api/wakatime?username=thedigitalbeni&theme=chartreuse-dark&hide_border=true&bg_color=010b05&title_color=00ff41&text_color=00d4ff&icon_color=00d4ff&layout=compact&cache_seconds=1800" />
+<img height="180em" src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=thedigitalbeni&theme=github_dark" />
+<img height="180em" src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=thedigitalbeni&theme=github_dark&utcOffset=3" />
 </div>
 
 ---
