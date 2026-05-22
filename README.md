@@ -25,6 +25,7 @@ root@thedigitalbeni:~$ cat about.json
     "Content Creation",
     "Problem Solving"
   ],
+
   "currently"  : [
     "Building real-world projects",
     "Sharpening DSA & backend skills",
@@ -33,7 +34,47 @@ root@thedigitalbeni:~$ cat about.json
     "Exploring AI-powered businesses"
   ],
 
+  "tech_stack" : {
+    "languages" : [
+      "Python",
+      "JavaScript",
+      "TypeScript",
+      "C++",
+      "Java",
+      "SQL"
+    ],
+  },
+
   "fun_fact"   : "I build systems by day and break them ethically by night 🔐",
+
+  "mindset"    : [
+    "Learn fast",
+    "Build consistently",
+    "Think long-term",
+    "Create leverage"
+  ],
+
+  "building"   : "AI tools, automation systems, and future digital businesses 🚀",
+
+  "learning"   : [
+    "Computer Science",
+    "Ethical Hacking",
+    "System Design",
+    "AI Engineering",
+    "Business & Startups"
+  ],
+
+  "interests"  : [
+    "Startups",
+    "Open Source",
+    "AI Agents",
+    "Cybersecurity",
+    "Digital Content",
+    "Tech Entrepreneurship"
+  ],
+
+  "goal"       : "Build impactful technology, achieve financial freedom, and create companies that scale globally.",
+
   "status"     : "🟢 OPEN TO INTERNSHIPS • COLLABORATIONS • STARTUP OPPORTUNITIES"
 }
 ```
@@ -118,13 +159,18 @@ root@thedigitalbeni:~$ cat about.json
 ### `> SYSTEM STATS`
 
 <div align="center">
+
 <img height="180em" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=thedigitalbeni&theme=github_dark" />
 <img height="180em" src="https://streak-stats.demolab.com/?user=thedigitalbeni&theme=matrix&hide_border=true&background=010b05&ring=00ff41&fire=ff0055&currStreakLabel=00d4ff&sideLabels=00d4ff&dates=00ff41" />
+
 </div>
+
 <br/>
+
 <div align="center">
-<img height="180em" src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=thedigitalbeni&theme=github_dark" />
-<img height="180em" src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=thedigitalbeni&theme=github_dark&utcOffset=3" />
+
+<img width="98%" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=thedigitalbeni&theme=github_dark" />
+
 </div>
 
 ---
@@ -133,7 +179,13 @@ root@thedigitalbeni:~$ cat about.json
 
 ### `> CONTRIBUTION MATRIX`
 
-![Snake animation](https://raw.githubusercontent.com/thedigitalbeni/thedigitalbeni/output/github-contribution-grid-snake-dark.svg)
+<div align="center">
+
+[![Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=thedigitalbeni&theme=react-dark&bg_color=010b05&color=00ff41&line=00ff41&point=00d4ff&area=true&area_color=00ff4115&hide_border=true)](https://github.com/ashutosh00710/github-readme-activity-graph)
+
+<br/>
+
+![Snake animation](https://raw.githubusercontent.com/thedigitalbeni/thedigitalbeni/output/github-contribution-grid-snake-matrix.svg)
 
 </div>
 
@@ -145,23 +197,15 @@ root@thedigitalbeni:~$ cat about.json
 
 <div align="center">
 
-<table>
-  <tr>
-    <td align="center" width="100%">
-      <br/>
-      <img src="https://img.shields.io/badge/google--gemini%2Fgemini--cli-Open%20Source%20Contributor-010b05?style=for-the-badge&logo=google&logoColor=00ff41&labelColor=010b05" />
-      <br/><br/>
-      <code>✅ CONTRIBUTION MERGED INTO PRODUCTION</code>
-      <br/><br/>
-      <sub>🔮 <strong>google-gemini / gemini-cli</strong> &nbsp;·&nbsp; Google Open Source</sub>
-      <br/><br/>
-    </td>
-  </tr>
-</table>
+<!-- OPEN_SOURCE_START -->
 
-</div>
+|   Organization   |                        Repository                         |  Status   |
+| :--------------: | :-------------------------------------------------------: | :-------: |
+| `@google-gemini` | [gemini-cli](https://github.com/google-gemini/gemini-cli) | ✅ Merged |
 
----
+<!-- OPEN_SOURCE_END -->
+
+</div>---
 
 <!-- ═════════════════════════ ESTABLISH CONNECTION ═══════════════════════ -->
 
