@@ -169,7 +169,7 @@ root@thedigitalbeni:~$ cat about.json
 
 <div align="center">
 
-<img width="98%" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=thedigitalbeni&theme=github_dark" />
+<img height="180em" width="70%" src="<https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=thedigitalbeni&theme=github_dark>" />
 
 </div>
 
@@ -180,10 +180,6 @@ root@thedigitalbeni:~$ cat about.json
 ### `> CONTRIBUTION MATRIX`
 
 <div align="center">
-
-[![Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=thedigitalbeni&theme=react-dark&bg_color=010b05&color=00ff41&line=00ff41&point=00d4ff&area=true&area_color=00ff4115&hide_border=true)](https://github.com/ashutosh00710/github-readme-activity-graph)
-
-<br/>
 
 ![Snake animation](https://raw.githubusercontent.com/thedigitalbeni/thedigitalbeni/output/github-contribution-grid-snake-matrix.svg)
 
