@@ -151,14 +151,14 @@ root@thedigitalbeni:~$ cat about.json
 ### `> OPEN SOURCE FOOTPRINT`
 
 <div align="center">
-
 <!-- OPEN_SOURCE_START -->
 | Organization | Repository | Status |
 |:---:|:---:|:---:|
-| `@fraol163` | [emaa](https://github.com/fraol163/emaa) | ✅ 2 PRs merged |
 <!-- OPEN_SOURCE_END -->
+ 
+</div>
 
-</div>---
+---
 
 <!-- ═════════════════════════ ESTABLISH CONNECTION ═══════════════════════ -->
 
