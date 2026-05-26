@@ -151,14 +151,11 @@ root@thedigitalbeni:~$ cat about.json
 ### `> OPEN SOURCE FOOTPRINT`
 
 
-<div align="center">
 <!-- OPEN_SOURCE_START -->
 | Organization | Repository | Status |
 |:---:|:---:|:---:|
-| `@google` | [gemini-cli](https://github.com/google-gemini/gemini-cli) | ✅ Merged |
+| `@google-gemini` | [gemini-cli](https://github.com/google-gemini/gemini-cli) | ✅ Merged |
 <!-- OPEN_SOURCE_END -->
- 
-</div>
 
 ---
 
