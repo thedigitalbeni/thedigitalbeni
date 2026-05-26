@@ -87,21 +87,25 @@ def sort_key(item: tuple[str, int]) -> tuple[int, int]:
 
 def build_table(repos: dict[str, int]) -> str:
     header = (
-        "| Organization | Repository | Status |\n"
-        "|:---:|:---:|:---:|\n"
+        "<table>\n"
+        "<thead><tr><th>Organization</th><th>Repository</th><th>Status</th></tr></thead>\n"
+        "<tbody>\n"
     )
+    footer = "</tbody>\n</table>\n"
+
     if not repos:
-        return header + "| — | No external contributions found yet | — |\n"
+        empty = "<tr><td>—</td><td>No external contributions found yet</td><td>—</td></tr>\n"
+        return header + empty + footer
 
     rows = ""
     for full_name, count in sorted(repos.items(), key=sort_key):
         org, repo = full_name.split("/", 1)
         rows += (
-            f"| `@{org}` "
-            f"| [{repo}](https://github.com/{full_name}) "
-            f"| {status_label(count)} |\n"
+            f"<tr><td><code>@{org}</code></td>"
+            f"<td><a href=\"https://github.com/{full_name}\">{repo}</a></td>"
+            f"<td>{status_label(count)}</td></tr>\n"
         )
-    return header + rows
+    return header + rows + footer
 
 def update_readme(table: str) -> None:
     with open(README, "r", encoding="utf-8") as f:
