@@ -106,9 +106,11 @@ root@thedigitalbeni:~$ cat about.json
 
 ### `> ACHIEVEMENTS`
 
-<div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=thedigitalbeni&show_icons=true&theme=radical" alt="GitHub Stats" />
-</div>
+<div align="center"> 
+  
+[![trophy](https://github-profile-trophy.vercel.app/?username=thedigitalbeni&theme=matrix&no-frame=true&no-bg=true&margin-w=6&margin-h=6&column=7)](https://github.com/ryo-ma/github-profile-trophy) 
+
+</div> 
 
 ---
 
