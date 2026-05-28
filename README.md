@@ -12,12 +12,12 @@
 
 <!-- ════════════════════════════ ABOUT ════════════════════════════════════ -->
 
-```python
+```json
 root@thedigitalbeni:~$ cat about.json
 {
   "name"       : "Beneyas Tadu",
   "role"       : ["Developer", "Creator", "pentester", "student"],
-  "based"      : "📍Addis Ababa, Ethiopia 🏳️",
+  "based"      : "📍Addis Ababa, Ethiopia 🇪🇹",
   "focus"      : [
     "Artificial Intelligence",
     "Automation Systems",
