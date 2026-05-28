@@ -107,9 +107,9 @@ root@thedigitalbeni:~$ cat about.json
 ### `> ACHIEVEMENTS`
 
 <div align="center">
-
-[![trophy](https://github-profile-trophy.vercel.app/?username=thedigitalbeni&theme=matrix&no-frame=true&no-bg=true&margin-w=6&margin-h=6&column=7)](https://github.com/ryo-ma/github-profile-trophy)
-
+  <a href="https://github.com/ryo-ma/github-profile-trophy">
+    <img src="https://github-profile-trophy.vercel.app/?username=thedigitalbeni&theme=matrix&no-frame=true&no-bg=true&margin-w=6&margin-h=6&column=7" alt="GitHub Trophies" />
+  </a>
 </div>
 
 ---
