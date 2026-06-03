@@ -103,17 +103,16 @@ root@thedigitalbeni:~$ cat about.json
 ---
 
 <!-- ═══════════════════════════ SYSTEM STATS ══════════════════════════════ -->
-
+ 
+### `> SYSTEM STATS`
+ 
 <div align="center">
 <img height="180em" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=thedigitalbeni&theme=github_dark" />
-<img height="180em" src="https://streak-stats.demolab.com/?user=thedigitalbeni&theme=matrix&hide_border=true&background=010b05&ring=00ff41&fire=ff0055&currStreakLabel=00d4ff&sideLabels=00d4ff&dates=00ff41" />
-
-
+<img height="180em" src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=thedigitalbeni&theme=github_dark" />
 <br/>
-
 <img height="180em" src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=thedigitalbeni&theme=github_dark&utcOffset=3" />
 </div>
-
+---
 
 <!-- ═════════════════════════ CONTRIBUTION MATRIX ════════════════════════ -->
 
