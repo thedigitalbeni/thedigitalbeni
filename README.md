@@ -102,38 +102,18 @@ root@thedigitalbeni:~$ cat about.json
 
 ---
 
-<!-- ══════════════════════════ ACHIEVEMENTS ═══════════════════════════════ -->
-
-### `> ACHIEVEMENTS`
-
-<div align="center"> 
-  
-[![trophy](https://github-profile-trophy.vercel.app/?username=thedigitalbeni&theme=matrix&no-frame=true&no-bg=true&margin-w=6&margin-h=6&column=7)](https://github.com/ryo-ma/github-profile-trophy) 
-
-</div> 
-
----
-
 <!-- ═══════════════════════════ SYSTEM STATS ══════════════════════════════ -->
 
-### `> SYSTEM STATS`
-
 <div align="center">
-
 <img height="180em" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=thedigitalbeni&theme=github_dark" />
 <img height="180em" src="https://streak-stats.demolab.com/?user=thedigitalbeni&theme=matrix&hide_border=true&background=010b05&ring=00ff41&fire=ff0055&currStreakLabel=00d4ff&sideLabels=00d4ff&dates=00ff41" />
-
 </div>
-
 <br/>
-
 <div align="center">
-
-<img width="70%" height="150" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=thedigitalbeni&theme=github_dark" />
-
+<img height="180em" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=thedigitalbeni&theme=github_dark" />
+<img height="180em" src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=thedigitalbeni&theme=github_dark&utcOffset=3" />
 </div>
 
----
 
 <!-- ═════════════════════════ CONTRIBUTION MATRIX ════════════════════════ -->
 
@@ -148,21 +128,14 @@ root@thedigitalbeni:~$ cat about.json
 
 <!-- ══════════════════════ OPEN SOURCE FOOTPRINT ══════════════════════════ -->
 
-### `> OPEN SOURCE FOOTPRINT`
-
+### OPEN SOURCE FOOTPRINT
 
 <div align="center">
 <!-- OPEN_SOURCE_START -->
 <table>
 <thead><tr><th>Organization</th><th>Repository</th><th>Status</th></tr></thead>
 <tbody>
-<tr><th>Organization</th><th>Repository</th><th>Status</th></tr>
-<tr><th>Organization</th><th>Repository</th><th>Status</th></tr>
-<tr><th>Organization</th><th>Repository</th><th>Status</th></tr>
-<tr><th>Organization</th><th>Repository</th><th>Status</th></tr>
-<tr><th>Organization</th><th>Repository</th><th>Status</th></tr>
-<tr><td><code>@google-gemini</code></td><td><a href="https://github.com/google-gemini/gemini-cli">gemini-cli</a></td><td>✅ Issues Fixed</td></tr>
-<tr><td><code>@fraol163</code></td><td><a href="https://github.com/fraol163/emaa">emaa</a></td><td>✅ 2 PRs merged</td></tr>
+<tr><td><code>@google-gemini</code></td><td><a href="https://github.com/google-gemini/gemini-cli">gemini-cli</a></td><td>✅ Issue contributor</td></tr>
 </tbody>
 </table>
 <!-- OPEN_SOURCE_END -->
