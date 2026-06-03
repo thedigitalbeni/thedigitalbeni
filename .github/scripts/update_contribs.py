@@ -1,10 +1,17 @@
 """
 update_contribs.py
 ──────────────────
-Fetches all merged PRs by the user to external repos, sorts well-known
-organizations to the top, and writes the result between the README markers.
+Detects all 4 GitHub contribution types (issues, pull requests,
+code reviews, commits) for external repos and updates the README
+between OPEN_SOURCE_START / OPEN_SOURCE_END markers.
 
-Place this file at: .github/scripts/update_contribs.py
+Rules:
+  - Manually-added rows (custom status text) are NEVER touched.
+  - Script-managed rows (auto-generated status) get their counts refreshed.
+  - New repos discovered by the API are appended.
+  - Major orgs (Google, Microsoft, etc.) always sort to the top.
+
+Place at: .github/scripts/update_contribs.py
 """
 
 import os
@@ -17,7 +24,17 @@ README    = "README.md"
 START_TAG = "<!-- OPEN_SOURCE_START -->"
 END_TAG   = "<!-- OPEN_SOURCE_END -->"
 
-# Known major orgs — these always float to the top regardless of PR count
+# Matches any status line this script generates — used to tell manual vs auto rows apart
+SCRIPT_ROW_RE = re.compile(
+    r"✅\s+("
+    r"\d+\s+PRs?\s+merged"
+    r"|\d+\s+commits?"
+    r"|\d+\s+issues?\s+filed"
+    r"|\d+\s+code\s+reviews?"
+    r"|Contributor"
+    r")"
+)
+
 MAJOR_ORGS = {
     "google", "google-gemini", "google-deepmind", "googlecodelabs",
     "microsoft", "azure", "dotnet",
@@ -27,41 +44,34 @@ MAJOR_ORGS = {
     "amazon", "aws", "awslabs",
     "vercel", "nextjs",
     "nodejs", "npm",
-    "docker",
-    "kubernetes", "helm",
+    "docker", "kubernetes", "helm",
     "facebook", "instagram",
     "twitter", "twitterdev",
     "github", "actions",
-    "mozilla",
-    "apache",
+    "mozilla", "apache",
     "linux", "torvalds",
-    "rust-lang",
-    "golang",
-    "python",
+    "rust-lang", "golang", "python",
 }
 
-def gh_get(path: str) -> dict:
+# ── GitHub API helpers ────────────────────────────────────────────────────────
+
+def _request(url: str, extra_accept: str = "") -> dict:
     token = os.environ.get("GH_TOKEN", "")
-    url   = f"https://api.github.com{path}"
     req   = urllib.request.Request(url)
-    req.add_header("Accept",     "application/vnd.github.v3+json")
+    req.add_header("Accept",     extra_accept or "application/vnd.github.v3+json")
     req.add_header("User-Agent", "readme-contrib-updater")
     if token:
         req.add_header("Authorization", f"Bearer {token}")
-    with urllib.request.urlopen(req, timeout=15) as resp:
+    with urllib.request.urlopen(req, timeout=20) as resp:
         return json.loads(resp.read().decode())
 
-def fetch_merged_prs() -> dict[str, int]:
-    """Return {full_repo_name: merged_pr_count} for all external repos."""
+def _paginate_issues(query: str) -> dict[str, int]:
+    """Run a paginated GitHub issue-search query and return {repo: count}."""
     repos: dict[str, int] = {}
     page = 1
     while True:
-        query = (
-            f"is:pr+is:merged+author:{USERNAME}"
-            f"+-user:{USERNAME}"
-            f"&per_page=100&page={page}"
-        )
-        data  = gh_get(f"/search/issues?q={query}")
+        url  = f"https://api.github.com/search/issues?q={query}&per_page=100&page={page}"
+        data = _request(url)
         items = data.get("items", [])
         if not items:
             break
@@ -74,120 +84,209 @@ def fetch_merged_prs() -> dict[str, int]:
         page += 1
     return repos
 
-def status_label(count: int) -> str:
-    if count == 1:
-        return "✅ 1 PR merged"
-    return f"✅ {count} PRs merged"
+# ── Fetch all 4 contribution types ───────────────────────────────────────────
 
-def sort_key(item: tuple[str, int]) -> tuple[int, int]:
-    full_name, count = item
-    org = full_name.split("/")[0].lower()
-    is_major = 0 if org in MAJOR_ORGS else 1   # major orgs sort first
-    return (is_major, -count)                   # then by PR count descending
+def fetch_all_contributions() -> dict[str, dict]:
+    """
+    Returns {full_repo_name: {prs, issues, reviews, commits}}
+    for every external repo the user has contributed to.
+    """
+    result: dict[str, dict] = {}
 
-SCRIPT_STATUS_RE = re.compile(r"✅ \d+ PRs? merged")
+    def add(full_name: str, kind: str, n: int = 1) -> None:
+        if full_name not in result:
+            result[full_name] = {"prs": 0, "issues": 0, "reviews": 0, "commits": 0}
+        result[full_name][kind] += n
+
+    def exclude_own() -> str:
+        return f"+-user:{USERNAME}"
+
+    # 1. Merged pull requests authored by the user
+    print("  → Fetching merged PRs …")
+    for repo, n in _paginate_issues(
+        f"type:pr+is:merged+author:{USERNAME}{exclude_own()}"
+    ).items():
+        add(repo, "prs", n)
+
+    # 2. Issues filed by the user
+    print("  → Fetching issues …")
+    for repo, n in _paginate_issues(
+        f"type:issue+author:{USERNAME}{exclude_own()}"
+    ).items():
+        add(repo, "issues", n)
+
+    # 3. PRs reviewed by the user (but not authored)
+    print("  → Fetching code reviews …")
+    for repo, n in _paginate_issues(
+        f"type:pr+reviewed-by:{USERNAME}+-author:{USERNAME}{exclude_own()}"
+    ).items():
+        add(repo, "reviews", n)
+
+    # 4. Commits to external repos
+    print("  → Fetching commits …")
+    try:
+        page = 1
+        while True:
+            url  = (
+                f"https://api.github.com/search/commits"
+                f"?q=author:{USERNAME}{exclude_own()}&per_page=100&page={page}"
+            )
+            data  = _request(url, extra_accept="application/vnd.github.cloak-preview")
+            items = data.get("items", [])
+            if not items:
+                break
+            for item in items:
+                repo_info = item.get("repository", {})
+                owner     = repo_info.get("owner", {}).get("login", "")
+                repo_name = repo_info.get("name", "")
+                if owner and repo_name and owner.lower() != USERNAME.lower():
+                    add(f"{owner}/{repo_name}", "commits")
+            if len(items) < 100:
+                break
+            page += 1
+    except Exception as exc:
+        print(f"  ⚠  Commit search skipped ({exc})")
+
+    return result
+
+# ── Status label builder ──────────────────────────────────────────────────────
+
+def status_label(data: dict) -> str:
+    parts = []
+    if data.get("prs"):
+        n = data["prs"]
+        parts.append(f"{n} PR{'s' if n > 1 else ''} merged")
+    if data.get("commits"):
+        n = data["commits"]
+        parts.append(f"{n} commit{'s' if n > 1 else ''}")
+    if data.get("issues"):
+        n = data["issues"]
+        parts.append(f"{n} issue{'s' if n > 1 else ''} filed")
+    if data.get("reviews"):
+        n = data["reviews"]
+        parts.append(f"{n} code review{'s' if n > 1 else ''}")
+    return "✅ " + (" · ".join(parts) if parts else "Contributor")
+
+# ── Sort: major orgs first, then by total contribution count ─────────────────
+
+def sort_key(item: tuple) -> tuple:
+    full_name, data = item
+    org      = full_name.split("/")[0].lower()
+    is_major = 0 if org in MAJOR_ORGS else 1
+    total    = sum(data.values())
+    return (is_major, -total)
+
+# ── README parsing ────────────────────────────────────────────────────────────
 
 def parse_existing_rows(content: str) -> list[str]:
-    """Extract existing HTML table rows from between the markers."""
-    pattern = re.compile(
-        re.escape(START_TAG) + r".*?" + re.escape(END_TAG),
-        re.DOTALL,
+    """
+    Extract <tr> rows from inside <tbody> only — never touches <thead>.
+    This prevents the duplicate-header bug.
+    """
+    outer = re.compile(
+        re.escape(START_TAG) + r".*?" + re.escape(END_TAG), re.DOTALL
     )
-    match = pattern.search(content)
-    if not match:
+    outer_match = outer.search(content)
+    if not outer_match:
         return []
-    block = match.group()
-    return re.findall(r"<tr>.*?</tr>", block, re.DOTALL)
+
+    tbody_match = re.search(r"<tbody>(.*?)</tbody>", outer_match.group(), re.DOTALL)
+    if not tbody_match:
+        return []
+
+    return re.findall(r"<tr>.*?</tr>", tbody_match.group(1), re.DOTALL)
 
 def is_script_managed(row: str) -> bool:
-    """Rows with '✅ X PR(s) merged' were added by this script — safe to update."""
-    return bool(SCRIPT_STATUS_RE.search(row))
+    """True if the row was written by this script (safe to update)."""
+    return bool(SCRIPT_ROW_RE.search(row))
 
 def row_has_repo(row: str, full_name: str) -> bool:
-    repo_part = full_name.split("/", 1)[1]
-    return repo_part.lower() in row.lower()
+    repo_part = full_name.split("/", 1)[1].lower()
+    return repo_part in row.lower()
 
-def build_table(dynamic: dict[str, int], existing_rows: list[str]) -> str:
+# ── Table builder ─────────────────────────────────────────────────────────────
+
+def build_table(dynamic: dict[str, dict], existing_rows: list[str]) -> str:
     header = (
         "<table>\n"
-        "<thead><tr><th>Organization</th><th>Repository</th><th>Status</th></tr></thead>\n"
+        "<thead><tr>"
+        "<th>Organization</th><th>Repository</th><th>Status</th>"
+        "</tr></thead>\n"
         "<tbody>\n"
     )
     footer = "</tbody>\n</table>\n"
+    rows   = ""
 
-    rows = ""
-
-    # 1. Keep all manually-added rows untouched (custom status, e.g. gemini-cli)
+    # Step 1 — preserve all manually-added rows exactly as written
     for row in existing_rows:
         if not is_script_managed(row):
             rows += row + "\n"
 
-    # 2. Script-managed rows: update count if repo found in API, keep if not
+    # Step 2 — refresh counts on script-managed rows
     for row in existing_rows:
         if not is_script_managed(row):
             continue
-        # Find which repo this row belongs to
-        matched_repo = next(
-            (fn for fn in dynamic if row_has_repo(row, fn)), None
-        )
-        if matched_repo:
-            # Update with fresh count
-            org, repo = matched_repo.split("/", 1)
-            count = dynamic[matched_repo]
+        matched = next((fn for fn in dynamic if row_has_repo(row, fn)), None)
+        if matched:
+            org, repo = matched.split("/", 1)
             rows += (
                 f"<tr><td><code>@{org}</code></td>"
-                f"<td><a href=\"https://github.com/{matched_repo}\">{repo}</a></td>"
-                f"<td>{status_label(count)}</td></tr>\n"
+                f"<td><a href=\"https://github.com/{matched}\">{repo}</a></td>"
+                f"<td>{status_label(dynamic[matched])}</td></tr>\n"
             )
         else:
-            # Repo not in API results this run — keep existing row as-is
-            rows += row + "\n"
+            rows += row + "\n"   # repo not in API results this run — keep as-is
 
-    # 3. Add brand new repos not yet in the table at all
-    for full_name, count in sorted(dynamic.items(), key=sort_key):
-        already_there = any(row_has_repo(r, full_name) for r in existing_rows)
-        if already_there:
+    # Step 3 — append brand-new repos not yet in the table
+    for full_name, data in sorted(dynamic.items(), key=sort_key):
+        if any(row_has_repo(r, full_name) for r in existing_rows):
             continue
         org, repo = full_name.split("/", 1)
         rows += (
             f"<tr><td><code>@{org}</code></td>"
             f"<td><a href=\"https://github.com/{full_name}\">{repo}</a></td>"
-            f"<td>{status_label(count)}</td></tr>\n"
+            f"<td>{status_label(data)}</td></tr>\n"
         )
 
     if not rows.strip():
-        rows = "<tr><td>—</td><td>No external contributions found yet</td><td>—</td></tr>\n"
+        rows = (
+            "<tr><td>—</td>"
+            "<td>No external contributions found yet</td>"
+            "<td>—</td></tr>\n"
+        )
 
     return header + rows + footer
+
+# ── README writer ─────────────────────────────────────────────────────────────
 
 def update_readme(table: str) -> None:
     with open(README, "r", encoding="utf-8") as f:
         content = f.read()
 
-    block   = f"{START_TAG}\n{table}{END_TAG}"
     pattern = re.compile(
-        re.escape(START_TAG) + r".*?" + re.escape(END_TAG),
-        re.DOTALL,
+        re.escape(START_TAG) + r".*?" + re.escape(END_TAG), re.DOTALL
     )
     if not pattern.search(content):
-        print("Markers not found in README — skipping.")
+        print("⚠  Markers not found in README — skipping.")
         return
 
-    updated = pattern.sub(block, content)
+    updated = pattern.sub(f"{START_TAG}\n{table}{END_TAG}", content)
     with open(README, "w", encoding="utf-8") as f:
         f.write(updated)
 
+# ── Entry point ───────────────────────────────────────────────────────────────
+
 if __name__ == "__main__":
-    print("Reading existing rows …")
+    print("📖  Reading existing rows …")
     with open(README, "r", encoding="utf-8") as f:
         current = f.read()
     existing = parse_existing_rows(current)
-    print(f"Found {len(existing)} existing row(s) — these will be preserved.")
+    print(f"    Preserved {len(existing)} existing row(s)")
 
-    print("Fetching merged PRs …")
-    repos = fetch_merged_prs()
-    print(f"Found {len(repos)} external repo(s): {list(repos.keys())}")
+    print("🔍  Fetching contributions (all 4 types) …")
+    contribs = fetch_all_contributions()
+    print(f"    Found activity in {len(contribs)} external repo(s)")
 
-    table = build_table(repos, existing)
+    table = build_table(contribs, existing)
     update_readme(table)
-    print("README updated — existing rows kept, new ones added.")
+    print("✅  README updated — manual rows kept, dynamic rows refreshed.")
