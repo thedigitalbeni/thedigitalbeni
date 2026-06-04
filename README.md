@@ -138,6 +138,7 @@ root@thedigitalbeni:~$ cat about.json
 <thead><tr><th>Organization</th><th>Repository</th><th>Status</th></tr></thead>
 <tbody>
 <tr><td><code>@google-gemini</code></td><td><a href="https://github.com/google-gemini/gemini-cli">gemini-cli</a></td><td>✅ Issue contributor</td></tr>
+<tr><td><code>@fraol163</code></td><td><a href="https://github.com/fraol163/emaa">emaa</a></td><td>✅ 2 PRs merged · 2 commits</td></tr>
 </tbody>
 </table>
 <!-- OPEN_SOURCE_END -->
