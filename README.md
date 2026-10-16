@@ -46,7 +46,6 @@ root@thedigitalbeni:~$ cat about.json
 ### `> CURRENT PROCESSES`
 
 ```text
-  🎓  [ ACTIVE  ]  Pursuing a Computer Science degree
   🛡️  [ ACTIVE  ]  Learning ethical hacking & offensive security
   📹  [ ACTIVE  ]  Creating developer content on YouTube & TikTok
   🔨  [ ACTIVE  ]  Building big projects — dropping soon 👀
